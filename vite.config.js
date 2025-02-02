@@ -1,12 +1,13 @@
-var resolve = require('path').resolve;
-var defineConfig = require('vite').defineConfig;
-module.exports = defineConfig({
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
+
+export default defineConfig({
     build: {
-        rollupoptions: {
+        rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-                public: resolve(__dirname, 'src/pages/public/public.html'),
-                public: resolve(__dirname, 'src/pages/admin/admin.html'),
+                publicPage: resolve(__dirname, 'src/pages/public/public.html'),
+                adminPage: resolve(__dirname, 'src/pages/admin/admin.html'),
             }
         }
     }
